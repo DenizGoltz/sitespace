@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kostenloses Erstgespräch — Webdesign Agentur</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-logo">YourAgency</div>
+    <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
+    <div class="loader-text">Wird geladen…</div>
+  </div>
+
+  <!-- Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">Your<span>Agency</span></a>
+        <nav class="header__nav">
+          <a href="index.html" class="nav__link">Home</a>
+          <a href="about.html" class="nav__link">Über uns</a>
+          <a href="references.html" class="nav__link">Referenzen</a>
+          <a href="clients.html" class="nav__link">Kunden</a>
+        </nav>
+        <a href="contact.html" class="btn btn--primary header__cta">Erstgespräch buchen</a>
+        <button class="burger" id="burger" aria-label="Menü öffnen">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <nav class="mobile-nav__links">
+      <a href="index.html" class="mobile-nav__link">Home</a>
+      <a href="about.html" class="mobile-nav__link">Über uns</a>
+      <a href="references.html" class="mobile-nav__link">Referenzen</a>
+      <a href="clients.html" class="mobile-nav__link">Kunden</a>
+      <a href="contact.html" class="mobile-nav__link">Kontakt</a>
+    </nav>
+  </div>
+
+  <!-- ===================== CONTACT HERO ===================== -->
+  <section class="contact-hero section--lg">
+    <!-- Glow Orbs -->
+    <div class="glow-orb glow-orb--blue contact-orb-1"></div>
+    <div class="glow-orb glow-orb--violet contact-orb-2"></div>
+
+    <div class="container">
+      <div class="contact-hero__inner">
+
+        <!-- LEFT: Info Column -->
+        <div class="contact-left reveal reveal--left">
+
+          <span class="section-label">Kostenloses Erstgespräch</span>
+
+          <h1 class="headline headline--xl">
+            Lass uns über dein<br>
+            <span class="gradient-text">Projekt reden.</span>
+          </h1>
+
+          <p class="contact-intro">
+            In einem unverbindlichen 30-Minuten-Gespräch analysieren wir gemeinsam deine Ziele und zeigen dir, wie wir dein Online-Auftreten auf das nächste Level bringen.
+          </p>
+
+          <!-- Perks -->
+          <ul class="contact-perks">
+            <li class="contact-perk reveal reveal--left reveal--d1">
+              <div class="contact-perk__icon">🎯</div>
+              <div>
+                <div class="contact-perk__title">100% kostenlos & unverbindlich</div>
+                <div class="contact-perk__text">Kein Verkaufsgespräch. Nur echte Beratung.</div>
+              </div>
+            </li>
+            <li class="contact-perk reveal reveal--left reveal--d2">
+              <div class="contact-perk__icon">⚡</div>
+              <div>
+                <div class="contact-perk__title">Antwort innerhalb 24 Stunden</div>
+                <div class="contact-perk__text">Wir melden uns garantiert schnell zurück.</div>
+              </div>
+            </li>
+            <li class="contact-perk reveal reveal--left reveal--d3">
+              <div class="contact-perk__icon">🚀</div>
+              <div>
+                <div class="contact-perk__title">Individuelle Strategie</div>
+                <div class="contact-perk__text">Maßgeschneiderte Lösungen für dein Business.</div>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Social Proof -->
+          <div class="contact-proof reveal reveal--left reveal--d4">
+            <div class="contact-proof__avatars">
+              <div class="proof-avatar proof-avatar--1">A</div>
+              <div class="proof-avatar proof-avatar--2">M</div>
+              <div class="proof-avatar proof-avatar--3">S</div>
+              <div class="proof-avatar proof-avatar--4">+</div>
+            </div>
+            <div>
+              <div class="contact-proof__stars">★★★★★</div>
+              <div class="contact-proof__text">Über <strong>50+ glückliche Kunden</strong> vertrauen uns</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Form Column -->
+        <div class="contact-right reveal reveal--right">
+          <div class="contact-form-wrapper glass-card">
+
+            <!-- Form Header -->
+            <div class="form-header">
+              <div class="form-header__badge">
+                <span class="hero__badge-dot"></span>
+                Jetzt Termin sichern
+              </div>
+              <h2 class="form-header__title">Starte noch heute</h2>
+              <p class="form-header__sub">Füll das Formular aus — wir kümmern uns um den Rest.</p>
+            </div>
+
+            <!-- Progress Steps -->
+            <div class="form-steps" id="formSteps">
+              <div class="form-step active" data-step="1">
+                <div class="form-step__circle">1</div>
+                <span class="form-step__label">Person</span>
+              </div>
+              <div class="form-step__line"></div>
+              <div class="form-step" data-step="2">
+                <div class="form-step__circle">2</div>
+                <span class="form-step__label">Projekt</span>
+              </div>
+              <div class="form-step__line"></div>
+              <div class="form-step" data-step="3">
+                <div class="form-step__circle">3</div>
+                <span class="form-step__label">Termin</span>
+              </div>
+            </div>
+
+            <!-- FORM -->
+            <div id="contactForm">
+
+              <!-- Step 1: Personal Info -->
+              <div class="form-page active" id="step1">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="firstName">Vorname</label>
+                    <div class="form-input-wrap">
+                      <span class="form-input-icon">👤</span>
+                      <input class="form-input" type="text" id="firstName" placeholder="Max" autocomplete="given-name" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="lastName">Nachname</label>
+                    <div class="form-input-wrap">
+                      <span class="form-input-icon">👤</span>
+                      <input class="form-input" type="text" id="lastName" placeholder="Mustermann" autocomplete="family-name" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="email">E-Mail-Adresse</label>
+                  <div class="form-input-wrap">
+                    <span class="form-input-icon">✉️</span>
+                    <input class="form-input" type="email" id="email" placeholder="max@beispiel.de" autocomplete="email" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="phone">Telefonnummer <span class="form-label-optional">(optional)</span></label>
+                  <div class="form-input-wrap">
+                    <span class="form-input-icon">📱</span>
+                    <input class="form-input" type="tel" id="phone" placeholder="+49 123 456789" autocomplete="tel" />
+                  </div>
+                </div>
+
+                <button class="btn btn--primary btn-next form-btn-next" data-target="2" type="button">
+                  Weiter <span class="btn-arrow">→</span>
+                </button>
+              </div>
+
+              <!-- Step 2: Project Info -->
+              <div class="form-page" id="step2">
+
+                <div class="form-group">
+                  <label class="form-label">Was brauchst du?</label>
+                  <div class="form-chips" id="serviceChips">
+                    <button class="form-chip" type="button" data-value="website">🌐 Website</button>
+                    <button class="form-chip" type="button" data-value="shop">🛒 Online-Shop</button>
+                    <button class="form-chip" type="button" data-value="landingpage">🚀 Landingpage</button>
+                    <button class="form-chip" type="button" data-value="redesign">🎨 Redesign</button>
+                    <button class="form-chip" type="button" data-value="seo">📈 SEO</button>
+                    <button class="form-chip" type="button" data-value="other">💡 Sonstiges</button>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Budget (ca.)</label>
+                  <div class="budget-slider-wrap">
+                    <input class="budget-slider" type="range" id="budgetSlider" min="0" max="5" step="1" value="1" />
+                    <div class="budget-labels">
+                      <span>< 1k</span>
+                      <span>1–3k</span>
+                      <span>3–5k</span>
+                      <span>5–10k</span>
+                      <span>10–20k</span>
+                      <span>> 20k</span>
+                    </div>
+                    <div class="budget-value-display" id="budgetDisplay">1.000 – 3.000 €</div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="message">Beschreib dein Projekt kurz</label>
+                  <div class="form-textarea-wrap">
+                    <textarea class="form-input form-textarea" id="message" placeholder="Worum geht es? Was ist dein Ziel? Was macht dein Business besonders?" rows="4"></textarea>
+                    <div class="textarea-counter"><span id="charCount">0</span>/500</div>
+                  </div>
+                </div>
+
+                <div class="form-btn-row">
+                  <button class="btn btn--ghost btn-back" data-target="1" type="button">← Zurück</button>
+                  <button class="btn btn--primary btn-next" data-target="3" type="button">
+                    Weiter <span class="btn-arrow">→</span>
+                  </button>
+                </div>
+
+              </div>
+
+              <!-- Step 3: Date Picker -->
+              <div class="form-page" id="step3">
+
+                <div class="form-group">
+                  <label class="form-label">Wann passt es dir?</label>
+                  <div class="time-slots" id="timeSlots">
+                    <button class="time-slot" type="button" data-value="mo-am">Mo. Vormittag</button>
+                    <button class="time-slot" type="button" data-value="mo-pm">Mo. Nachmittag</button>
+                    <button class="time-slot" type="button" data-value="di-am">Di. Vormittag</button>
+                    <button class="time-slot" type="button" data-value="di-pm">Di. Nachmittag</button>
+                    <button class="time-slot" type="button" data-value="mi-am">Mi. Vormittag</button>
+                    <button class="time-slot" type="button" data-value="mi-pm">Mi. Nachmittag</button>
+                    <button class="time-slot" type="button" data-value="do-am">Do. Vormittag</button>
+                    <button class="time-slot" type="button" data-value="do-pm">Do. Nachmittag</button>
+                    <button class="time-slot" type="button" data-value="fr-am">Fr. Vormittag</button>
+                    <button class="time-slot" type="button" data-value="flex">Flexibel</button>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Bevorzugter Kanal</label>
+                  <div class="form-chips" id="channelChips">
+                    <button class="form-chip" type="button" data-value="video">📹 Video-Call</button>
+                    <button class="form-chip" type="button" data-value="phone">📞 Telefon</button>
+                    <button class="form-chip" type="button" data-value="inperson">🤝 Persönlich</button>
+                  </div>
+                </div>
+
+                <!-- Privacy -->
+                <label class="form-checkbox-label" for="privacy">
+                  <input type="checkbox" id="privacy" class="form-checkbox" />
+                  <span class="form-checkbox-custom"></span>
+                  <span class="form-checkbox-text">Ich stimme der <a href="#" class="form-link">Datenschutzerklärung</a> zu und bin einverstanden, kontaktiert zu werden.</span>
+                </label>
+
+                <div class="form-btn-row">
+                  <button class="btn btn--ghost btn-back" data-target="2" type="button">← Zurück</button>
+                  <button class="btn btn--primary btn-submit" type="button" id="submitBtn">
+                    <span class="btn-submit-text">Gespräch anfragen ✨</span>
+                    <span class="btn-submit-loading" style="display:none;">Wird gesendet…</span>
+                  </button>
+                </div>
+
+              </div>
+
+            </div><!-- /contactForm -->
+
+            <!-- Success State -->
+            <div class="form-success" id="formSuccess">
+              <div class="success-anim">
+                <svg class="success-checkmark" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle class="success-circle" cx="40" cy="40" r="36" stroke="url(#g1)" stroke-width="2"/>
+                  <polyline class="success-check" points="24,40 35,52 56,28" stroke="url(#g1)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <defs>
+                    <linearGradient id="g1" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#38beff"/>
+                      <stop offset="1" stop-color="#a855f7"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h3 class="success-title">Anfrage erhalten! 🎉</h3>
+              <p class="success-text">Danke für deine Nachricht. Wir melden uns innerhalb von <strong>24 Stunden</strong> bei dir. Check deinen Posteingang!</p>
+              <div class="success-confetti" id="successConfetti"></div>
+            </div>
+
+          </div><!-- /contact-form-wrapper -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        <span class="footer__copyright">© 2025 YourAgency. Alle Rechte vorbehalten.</span>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">Impressum</a>
+          <a href="#" class="footer__legal-link">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/contact.js"></script>
+</body>
+</html>
